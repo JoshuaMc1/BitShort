@@ -1,72 +1,54 @@
-# JMFramework
+# BitShort
 
-<p>
-   <a href="https://packagist.org/packages/joshuamc1/jmframework"><img src="https://img.shields.io/packagist/dt/joshuamc1/jmframework" alt="Total Downloads"></a>
-   <a href="https://packagist.org/packages/joshuamc1/jmframework"><img src="https://img.shields.io/packagist/v/joshuamc1/jmframework" alt="Latest Stable Version"></a>
-   <a href="https://packagist.org/packages/joshuamc1/jmframework"><img src="https://img.shields.io/packagist/l/joshuamc1/jmframework" alt="License"></a>
-</p>
-
-JMFramework es un framework PHP diseñado para facilitar el desarrollo de aplicaciones web siguiendo el patrón de diseño Modelo Vista Controlador (MVC). Con un enfoque en la simplicidad y la facilidad de aprendizaje, JMFramework proporciona un solo punto de entrada, librerías incorporadas y una configuración predeterminada de estilos utilizando TailwindCSS.
-
-## Características Principales
-
-- **Arquitectura MVC:** Organiza tu código de manera clara siguiendo el patrón Modelo Vista Controlador.
-- **Punto de Entrada Único:** Simplifica la estructura y navegación del proyecto con un solo punto de entrada.
-- **Librerías Incorporadas:** Incluye librerías propias para tareas comunes, acelerando el desarrollo.
-- **Configuración Predeterminada de Estilos:** Integración con TailwindCSS para un diseño moderno y flexible.
-- **Motor de Plantillas Twig:** Integración con Twig para la creación de plantillas HTML dinámicas.
-- **Seguridad:** Soporte para la gestión de permisos, autenticación y autorización.
-- **Sistema de migraciones:** El proyecto cuenta con su propio sistema de migraciones llamado SchemaForge el cual te permite realizar migraciones de base de datos de forma sencilla.
-- **Storage:** Soporte para la gestión de archivos y carpetas.
-- **Validación de datos:** Soporte para la validación de datos de entrada.
-- **Eloquent ORM:** Soporte para la gestión de bases de datos relacionales.
+**BitShort** es una innovadora aplicación web de acortamiento de URLs que ofrece una forma rápida y sencilla de reducir enlaces largos a formatos más compactos. Desarrollada con **JMFramework**, BitShort combina una interfaz intuitiva con un rendimiento excepcional, permitiendo a los usuarios acortar URLs de manera eficiente y efectiva. Con BitShort, la gestión de enlaces nunca ha sido tan fácil.
 
 ## Instalación
 
-1. Ejecuta el siguiente comando para crear un nuevo proyecto JMFramework:
+Para instalar BitShort, siga estos pasos:
 
-   ```bash
-   composer create-project joshuamc1/jmframework example-name
+1.  Clona el repositorio de BitShort:
 
-   ```
+    ```bash
+    git clone https://github.com/JoshuaMc1/BitShort.git
+    ```
 
-2. Navega al directorio del nuevo proyecto:
+2.  Instala las dependencias de PHP:
 
-   ```bash
-   cd example-name
+    ```bash
+    composer install
+    ```
 
-   ```
+3.  Instala las dependencias de Node.js:
 
-3. Instala las dependencias de Node.js:
+    ```bash
+    npm install
+    ```
 
-   ```bash
-   npm install
+4.  Configura el archivo de variables de entorno:
 
-   ```
+    ```bash
+    cp .env.example .env
+    ```
 
-4. Compila los estilos para el proyecto:
+5.  Configura la conexión a la base de datos en el archivo .env
 
-   ```bash
-   npm run dev
+6.  Inicia el servidor de desarrollo con el siguiente comando:
 
-   ```
+    ```bash
+    php console serve
+    ```
 
-5. Inicia el servidor de desarrollo con el siguiente comando:
-   ```bash
-     php console serve
-   ```
+7.  Compila los estilos para el proyecto:
 
-## Documentación
+    ```bash
+    npm run dev
+    ```
 
-La documentación completa ya está disponible en la siguiente URL: [JMFramework Documentation](http://jmprojects.atwebpages.com/). Hemos trabajado arduamente para proporcionar información detallada sobre cómo comenzar con JMFramework, configurar tu proyecto y utilizar todas las características ofrecidas. ¡Visita el enlace para obtener más información!
+8.  Ejecuta las migraciones de la base de datos:
 
-## Contribuir
-
-¡Apreciamos las contribuciones! Si tienes ideas para mejorar JMFramework, no dudes en abrir un issue o enviar un pull request.
-
-## Problemas y Sugerencias
-
-Si encuentras problemas o tienes sugerencias para mejorar JMFramework, por favor, abre un [issue en GitHub](https://github.com/JoshuaMc1/JMFramework/issues).
+    ```bash
+    php console schema:run
+    ```
 
 ## Licencia
 
