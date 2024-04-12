@@ -1,0 +1,36 @@
+#!/usr/bin/env php
+
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/lib/Global/Global.php';
+
+use Illuminate\Console\Application;
+use Illuminate\Container\Container;
+use Illuminate\Events\Dispatcher;
+use Symfony\Component\Finder\Finder;
+
+$finder = new Finder();
+$finder->files()->in([
+    sprintf('%s/Console/', lib_path()),
+    sprintf('%s/Console/Commands/', app_path()),
+])->name('*.php');
+
+$container = new Container();
+$dispatcher = new Dispatcher($container);
+$application = new Application($container, $dispatcher, 'v2.2.2');
+
+$namespaces = ['App\Console\Commands\\', 'Lib\Console\\'];
+
+foreach ($finder as $file) {
+    foreach ($namespaces as $namespace) {
+        $commandClass = $namespace . $file->getBasename('.php');
+
+        if (class_exists($commandClass)) {
+            $application->add(new $commandClass());
+            break;
+        }
+    }
+}
+
+$application->run();
