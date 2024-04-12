@@ -1,6 +1,8 @@
 # BitShort
 
-**BitShort** es una innovadora aplicación web de acortamiento de URLs que ofrece una forma rápida y sencilla de reducir enlaces largos a formatos más compactos. Desarrollada con **JMFramework**, BitShort combina una interfaz intuitiva con un rendimiento excepcional, permitiendo a los usuarios acortar URLs de manera eficiente y efectiva. Con BitShort, la gestión de enlaces nunca ha sido tan fácil.
+![Captura de pantalla del sitio](site.png)
+
+**BitShort** es una innovadora aplicación web de acortamiento de URLs que ofrece una forma rápida y sencilla de reducir enlaces largos a formatos más compactos. Desarrollada con **[JMFramework](https://github.com/JoshuaMc1/JMFramework)**, BitShort combina una interfaz intuitiva con un rendimiento excepcional, permitiendo a los usuarios acortar URLs de manera eficiente y efectiva. Con BitShort, la gestión de enlaces nunca ha sido tan fácil.
 
 ## Instalación
 
